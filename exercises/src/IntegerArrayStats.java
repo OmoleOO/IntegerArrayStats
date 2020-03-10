@@ -5,6 +5,7 @@ public class IntegerArrayStats {
         int average = findAverage(numbers);
         System.out.println("Minimum number: " + min);
         System.out.println("Average number: " + average);
+        System.out.println("10 factorial: " + factorial(10));
     }
 
     private static int findMinimum(int[] numbers){
@@ -21,5 +22,13 @@ public class IntegerArrayStats {
         for ( int number : numbers )
             total += number;
         return total / numbers.length;
+    }
+
+    private static int factorial(int n){
+        int factorial = 1;
+        for ( int i = 1; i <= n; i++){
+            factorial *= i;
+        }
+        return factorial;
     }
 }
